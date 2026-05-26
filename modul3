@@ -1,0 +1,28 @@
+// 31 . Basic JDBC Connection
+import java.util.*;
+import java.sql.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		try{
+		Connection con=DriverManager.getConnection("https","username","password");
+		PreparedStatement stmt=con.prepareStatement("select * from Students");
+	    ResultSet res=stmt.executeQuery();
+	    while(res.next())
+	    {
+	        String name=res.getString("name");
+	        System.out.println(name);
+	    }
+	   // System.out.println("asdfghj");
+	    con.close();
+	    stmt.close();
+		    
+		}
+		catch(Exception e)
+		{
+		    System.out.println("error");
+		}
+		
+	}
+}
