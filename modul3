@@ -1,3 +1,29 @@
+29. Records
+package jakarta.servlet;
+
+import java.util.List;
+
+record Person(String name,int age)
+{
+	
+}
+public class Server {
+
+ public static void main(String[] args) throws Exception {
+	 	Person p1=new Person("priya",21);
+	 	Person p2=new Person("akash",15);
+	 	Person p3=new Person("selvi",22);
+	 	System.out.println(p1.name());
+	 	System.out.println(p2.age());
+	 	System.out.println(p3.name());
+	 	List<Person>p=List.of(p1,p2,p3);
+	 	p.stream().
+	 	filter(Person->Person.age()>18)
+		.forEach(System.out::println);
+	 	
+	 	
+ }
+}
 30. Pattern Matching for switch (Java 21)
 package jakarta.servlet;
 public class Server {
