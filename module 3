@@ -1,3 +1,35 @@
+19 interface
+package jakarta.servlet;
+interface Game
+{
+	public void play();
+}
+class Guitar implements Game 
+{
+	public void play()
+	{
+		System.out.println("guitar");
+	}
+}
+class Piano implements Game 
+{
+	public void play()
+	{
+		System.out.println("Piano");
+	}
+}
+
+
+public class Server   {
+
+ public static void main(String[] args)  {
+     Guitar g=new Guitar();
+     g.play();
+     Piano p=new Piano();
+     p.play();
+ }
+ 
+}
 20 try catch
 package jakarta.servlet;
 class custom extends Exception
