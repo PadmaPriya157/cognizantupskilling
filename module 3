@@ -1,3 +1,60 @@
+20 try catch
+package jakarta.servlet;
+class custom extends Exception
+{
+	custom(String name)
+	{
+		super(name);
+	}
+}
+
+public class Server  {
+
+ public static void main(String[] args)  {
+     int a=10,b=11;
+     try {
+    	 
+    	 if(a<b)
+    	 {
+    		 throw new  custom("a is less than b");
+    	 }
+     }
+     catch(Exception e)
+     {
+    	 System.out.println(e.getMessage());
+     }
+	 	
+ }
+}
+21 custom exception
+package jakarta.servlet;
+class custom extends Exception
+{
+	custom(String name)
+	{
+		super(name);
+	}
+}
+
+public class Server  {
+
+ public static void main(String[] args)  {
+     int a=10,b=11;
+     try {
+    	 
+    	 if(a<b)
+    	 {
+    		 throw new  custom("a is less than b");
+    	 }
+     }
+     catch(Exception e)
+     {
+    	 System.out.println(e.getMessage());
+     }
+	 	
+ }
+}
+
 22 FILE READING
 package jakarta.servlet;
 
