@@ -82,3 +82,78 @@ public class Main
 		
 	}
 }
+35. TCP Client-Server Chat
+package jakarta.servlet;
+
+//Server.java
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Server {
+ public static void main(String[] args) {
+     try {
+        ServerSocket  serversocket=new ServerSocket(3210);
+        System.out.println("server is waiting");
+        Socket socket=serversocket.accept();
+        System.out.println("client connected");
+        
+        BufferedReader in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter out=new PrintWriter(socket.getOutputStream(),true);
+        Scanner scn=new Scanner(System.in);
+        while(true)
+        {
+        	String clientmsg=in.readLine();
+        	System.out.println("Client"+clientmsg);
+        	if(clientmsg.equals("exit"))
+        		break;
+        	System.out.println("Server:");
+        	String servermsg=scn.nextLine();
+        	out.println(servermsg);
+
+        	
+        }
+        
+        socket.close();
+        serversocket.close();
+
+     } catch (Exception e) {
+         System.out.println(e);
+     }
+ }
+}
+package jakarta.servlet;
+
+//Client.java
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Client {
+ public static void main(String[] args) {
+     try {
+        Socket socket=new Socket("localhost",321pri0);
+        BufferedReader in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter out=new PrintWriter(socket.getOutputStream(),true);
+        Scanner scn=new Scanner(System.in);
+        while(true)
+        {
+        	System.out.println("Client:");
+        	String clientmsg=scn.nextLine();
+        	out.println(clientmsg);
+        	if (clientmsg.equalsIgnoreCase("exit"))
+        		break;
+        	String servermsg=in.readLine();
+        	System.out.println("Server"+servermsg);
+        	if(servermsg.equals("exit"))
+        		break;
+
+        	
+        }
+        socket.close();
+
+     } catch (Exception e) {
+         System.out.println(e);
+     }
+ }
+}
