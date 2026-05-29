@@ -1,3 +1,18 @@
+28. Stream API
+package jakarta.servlet;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+public class Server {
+
+ public static void main(String[] args) throws Exception {
+	 	List<Integer>l=List.of(1,2,3,4,5,6,7,8,9,10);
+	 	List<Integer>ans=l.stream().filter(i->i%2==0).collect(Collectors.toList());
+	 	System.out.println(ans);	 	
+ }
+}
 29. Records
 package jakarta.servlet;
 
