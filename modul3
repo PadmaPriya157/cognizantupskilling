@@ -221,4 +221,7 @@ public class jakarta.servlet.Server {
        4: invokevirtual #22                 // Method java/io/PrintStream.println:(I)V      
        7: return
 }
+38. Decompile a Class File
+https://www.javadecompilers.com/?utm_source=chatgpt.com
+decompiler url
 
