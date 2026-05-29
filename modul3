@@ -1,3 +1,27 @@
+26. Thread Creation
+package jakarta.servlet;
+class Mythread  extends Thread
+{
+	int sum;
+	Mythread(int sum)
+	{
+		this.sum=sum;
+	}
+	public void run()
+	{
+		System.out.println(sum);
+	}
+}
+public class Server  {
+
+ public static void main(String[] args)  {
+     Mythread t1=new Mythread(10);
+     Mythread t2=new Mythread(5);
+     t1.start();
+     t2.start();
+	 	
+ }
+}
 27. Lambda Expressions
 package jakarta.servlet;
 
