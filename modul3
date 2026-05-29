@@ -1,3 +1,27 @@
+30. Pattern Matching for switch (Java 21)
+package jakarta.servlet;
+public class Server {
+	public static void check(Object obj)
+	{
+		switch(obj)
+		{
+		case Integer i->
+		System.out.println("Integer"+i);
+		case Double d->
+		System.out.println("double"+d);
+		case String s->
+		System.out.println("String"+s);
+		default ->
+		System.out.println("Unknown type");
+		}
+	}
+ public static void main(String[] args) throws Exception {
+	 	check(1);
+	 	check(2.2);
+	 	check("priya");
+ }
+}
+
 // 31 . Basic JDBC Connection
 import java.util.*;
 import java.sql.*;
@@ -272,3 +296,4 @@ public class Server {
 	 t.join();
  }
 }
+
