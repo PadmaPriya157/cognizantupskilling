@@ -1,3 +1,86 @@
+24 // 24. ArrayList Example
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListDemo {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> students = new ArrayList<>();
+
+        System.out.println("Enter number of students:");
+
+        int n = sc.nextInt();
+
+        sc.nextLine();
+
+        for(int i = 1; i <= n; i++) {
+
+            System.out.println("Enter student name:");
+
+            String name = sc.nextLine();
+
+            students.add(name);
+        }
+
+        System.out.println("\nStudent Names:");
+
+        for(String s : students) {
+            System.out.println(s);
+        }
+    }
+}
+25 // 25. HashMap Example
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HashMapDemo {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        HashMap<Integer, String> map = new HashMap<>();
+
+        System.out.println("Enter number of students:");
+
+        int n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++) {
+
+            System.out.println("Enter Student ID:");
+
+            int id = sc.nextInt();
+
+            sc.nextLine();
+
+            System.out.println("Enter Student Name:");
+
+            String name = sc.nextLine();
+
+            map.put(id, name);
+        }
+
+        System.out.println("\nEnter ID to search:");
+
+        int searchId = sc.nextInt();
+
+        if(map.containsKey(searchId)) {
+
+            System.out.println(
+                "Student Name: " + map.get(searchId)
+            );
+
+        } else {
+
+            System.out.println("ID not found");
+        }
+    }
+}
 26. Thread Creation
 package jakarta.servlet;
 class Mythread  extends Thread
