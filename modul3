@@ -225,3 +225,39 @@ public class jakarta.servlet.Server {
 https://www.javadecompilers.com/?utm_source=chatgpt.com
 decompiler url
 
+39. Reflection in Java
+package jakarta.servlet;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+public class Server {
+ public static void main(String[] args) throws Exception {
+	 
+
+	Class<?>cls=Class.forName("jakarta.servlet.Client");
+	Method meth[]=cls.getDeclaredMethods();
+	System.out.println("------------------methods--------------");
+	for(Method m:meth)
+		System.out.println(m);
+	
+	Object obj=cls.getDeclaredConstructor().newInstance();
+	Method m=cls.getDeclaredMethod("show");
+	
+	System.out.print("INvoke");
+	m.invoke(obj);
+	
+	
+ }
+}
+package jakarta.servlet;
+
+public class Client {
+	public Client()
+	{
+		
+	}
+	public void show()
+	{
+		System.out.println("Hello");
+	}
+}
