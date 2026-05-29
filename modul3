@@ -1,3 +1,27 @@
+27. Lambda Expressions
+package jakarta.servlet;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
+public class Server {
+
+ public static void main(String[] args) throws Exception {
+     List<String> l = new ArrayList<>();
+
+     l.add("Ram");
+     l.add("Arun");
+     l.add("Priya");
+     l.add("Bala");
+
+	 	Collections.sort(l,(a,b)->a.compareTo(b));
+	 	System.out.println(l); 	
+	 	
+ }
+}
 28. Stream API
 package jakarta.servlet;
 
