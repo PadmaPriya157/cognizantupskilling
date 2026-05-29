@@ -190,3 +190,35 @@ public class Client {
      }
  }
 }
+
+37. Using javap to Inspect Bytecode
+package jakarta.servlet;
+
+//Server.java
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class Server {
+ public static void main(String[] args) {
+	 
+
+	 System.out.println(1+2);
+ }
+}
+C:\Users\priya\eclipse-workspace\JAVA\bin>javap -c jakarta.servlet.Server
+Compiled from "Server.java"
+public class jakarta.servlet.Server {
+  public jakarta.servlet.Server();
+    Code:
+       0: aload_0
+       1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+       4: return
+ public static void main(java.lang.String[]);
+    Code:
+       0: getstatic     #16                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: iconst_3
+       4: invokevirtual #22                 // Method java/io/PrintStream.println:(I)V      
+       7: return
+}
+
