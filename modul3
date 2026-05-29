@@ -1,3 +1,61 @@
+22 FILE READING
+package jakarta.servlet;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Server  {
+
+ public static void main(String[] args)  {
+     try {
+		FileWriter fw=new FileWriter("output.txt");
+		Scanner scn=new Scanner(System.in);
+		String s=scn.nextLine();
+		
+		for(int i=0;i<s.length();i++)
+			fw.write(s.charAt(i));
+		
+		fw.close();
+
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+     
+	 	
+ }
+}
+23 FILE READING
+package jakarta.servlet;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Server  {
+
+ public static void main(String[] args)  {
+     try {
+		FileReader fw=new FileReader("output.txt");
+		char p;
+		while((p=(char) fw.read())!=-1)
+			
+		{
+			System.out.println((char)p);
+		}
+		
+		fw.close();
+
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+     
+	 	
+ }
+}
 24 // 24. ArrayList Example
 
 import java.util.ArrayList;
