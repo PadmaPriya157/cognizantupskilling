@@ -261,3 +261,14 @@ public class Client {
 		System.out.println("Hello");
 	}
 }
+ 40. Virtual Threads (Java 21)
+package jakarta.servlet;
+public class Server {
+ public static void main(String[] args) throws Exception {
+	 Thread t=Thread.startVirtualThread(()->{
+		 System.out.println("virtual thread");
+	 });
+	 System.out.println("Main thread thread");
+	 t.join();
+ }
+}
