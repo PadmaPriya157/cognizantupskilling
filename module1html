@@ -1,3 +1,4 @@
+
 1 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,3 +21,34 @@
     </footer>
 </body>
 </html>
+
+2. Navigation and Linking
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+         <a href="help.html" target="_blank">Help</a>
+    </nav>
+    <hr>
+    <section id="home">
+        <p>This is home</p>
+    </section>
+    <hr>
+    <section id="events">
+        <p>This is Events</p>
+    </section>
+    <hr>
+    <section id="contact">
+        <p>This is Contact</p>
+    </section>
+</body>
+</html>
+
