@@ -107,3 +107,42 @@
         </div>
     </body>
     </html>
+5. Event Registration Form
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       
+    </head>
+
+    <body>
+        <script>
+            function submitevent(event)
+            {
+              res=  document.getElementsByName("name");
+                    document.getElementById("result").value="register sucessfully "+name+" ";
+            }
+        </script>
+        <div>
+            <form onsubmit="submitevent(event)">
+
+                <label for="name">name</label>
+                <input id="name" type='text' autofocus>
+                <label for="email">email</label>
+                <input id="email" type='email' required autofocus>
+                <label for="date">Date</label>
+                <input id="date" type='date' autofocus>
+                <label for="event">Select a Event</label>
+                <select id="event">
+                    <option >event1</option>
+                    <option >event2</option>
+                    <option >event3</option>
+                </select>
+                <button type="submit">submit</button>
+                <output id="result"></output>
+            </form>
+        </div>
+    </body>
+    </html>
