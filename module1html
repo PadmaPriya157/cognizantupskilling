@@ -216,3 +216,34 @@
         </div>
     </body>
     </html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       
+    </head>
+
+    <body onbeforeunload="return MyUnload()">
+        <script>
+            function MyFunction()
+            {
+                document.getElementById("auto").innerHTML="play audio"
+            }
+            function MyUnload()
+            {
+                return "write something clever"
+            }
+        </script>
+       <div>
+        <video controls oncanplay="MyFunction()">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            
+        </video>
+        <div id="auto"></div>
+        <input>
+        <a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onbeforeunload">click</a>
+       </div>
+    </body>
+    </html>
