@@ -146,3 +146,73 @@
         </div>
     </body>
     </html>
+6. Event Feedback with Events Handling
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       
+    </head>
+
+    <body>
+        <script>
+            function validate()
+            {
+                let phone =document.getElementById("phone").value;
+                let msg=document.getElementById("msg");
+                if(/^[0-9]{10}$/.test(phone))
+                {
+                    msg.innerHTML="valid"
+                     msg.style.color = "red";
+                }
+                else 
+                {
+                    msg.innerHTML="invalid"
+                     msg.style.color = "red";
+                }
+            }
+            function showfee()
+            {
+                fee=document.getElementById("events").value;
+                document.getElementById("fee").innerHTML=fee;
+            }
+            function double()
+            {
+                let val=document.getElementById("image").value;
+                val.style.width="300px"
+
+            }
+        </script>
+        <div>
+            <form >
+
+                <label for="phone">Phone Number</label>
+                <input id="phone" type='text' onblur="validate()">
+                <div id="msg"></div>
+
+
+                <select id="events" onChange="showfee()">
+                    <option value="" >Events1</option>
+                    <option value="100">Events2</option>
+                    <option value="200">Events3</option>
+                </select>
+                <div id="fee"></div>
+                <img src="https://via.placeholder.com/150" id="image" ondblclick="double()" alt="enlarge">
+                <!-- <label for="email">email</label>
+                <input id="email" type='email' required autofocus>
+                <label for="date">Date</label>
+                <input id="date" type='date' autofocus>
+                <label for="event">Select a Event</label>
+                <select id="event">
+                    <option >event1</option>
+                    <option >event2</option>
+                    <option >event3</option>
+                </select>
+                <button type="submit">submit</button>
+                <output id="result"></output> -->
+            </form>
+        </div>
+    </body>
+    </html>
