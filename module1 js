@@ -80,7 +80,15 @@ function Events(name,seats)
     this.seats=seats;
 }
 // prototype is used for single connection 
-Events.prototype.check=function()
+Events.prototype.check=functlet arr=[]
+arr.push("event1")
+arr.push("music")
+console.log(arr)
+const ams=arr.filter(n=> n==="music")
+console.log(ams)
+const dis=arr.map(n=>n)
+console.log(dis)
+ion()
 {
     return this.seats>0?"available":"full";
 }
@@ -94,3 +102,5 @@ console.log(ob2.check())
 Object.entries(ob).forEach(([key, value]) => {
     console.log(`${key}: ${value}`);
 });
+
+6. Arrays and Methods
