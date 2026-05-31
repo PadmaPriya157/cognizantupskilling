@@ -72,3 +72,25 @@ catch(error)
 {
     console.log(error.message);
 }
+5. Objects and Prototypes
+// constructor
+function Events(name,seats)
+{
+    this.name=name;
+    this.seats=seats;
+}
+// prototype is used for single connection 
+Events.prototype.check=function()
+{
+    return this.seats>0?"available":"full";
+}
+const ob=new Events("priya",50)
+const ob2=new Events("akash",0)
+console.log("protoype")
+// ob.check()
+console.log(ob.check())
+console.log(ob2.check())
+// object is used to convert the object intot array
+Object.entries(ob).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+});
