@@ -35,3 +35,40 @@ console.log(`seats:${seats}`)
 seats--
 console.log("after regisered")
 console.log(`seats:${seats}`)
+3. Conditionals, Loops, and Error Handling
+const events = [
+    {
+        name: "Community Meeting",
+        date: "2026-06-10",
+        seats: 20
+    },
+    {
+        name: "Old Event",
+        date: "2025-01-01",
+        seats: 15
+    },
+    {
+        name: "Workshop",
+        date: "2026-07-15",
+        seats: 0
+    }
+];
+
+const today=new Date()
+events.forEach(event=>{
+    if(new Date(event.date)>today&&event.seats>=0)
+        console.log(`${event.name} is available`)
+    else 
+        console.log(`${event.name} is Hidden`)
+})
+
+try{
+    events.forEach(events=>{
+        if(events.seats<=0)
+            throw new Error("seats not available")
+    })
+}
+catch(error)
+{
+    console.log(error.message);
+}
