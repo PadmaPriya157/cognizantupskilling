@@ -247,3 +247,35 @@
        </div>
     </body>
     </html>
+8. Saving User Preferences
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       
+    </head>
+
+    <body>
+        <div id="result">
+        </div>
+           <script>
+              x=document.getElementById("result")
+             if(typeof(Storage)!=="undefined")
+             {
+               localStorage.setItem("name","priya")
+               x.innerHTML=localStorage.getItem("name")
+               x.style.backgroundColor="yellow"
+               localStorage.removeItem("name")
+                x.innerHTML=(localStorage.getItem("name"));
+             }
+             else
+             {
+               x.innerHTML="no storage"
+             }
+           </script>
+        
+    </body>
+    </html>
