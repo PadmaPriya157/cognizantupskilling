@@ -25,3 +25,13 @@
         
     </body>
     </html>
+2. Syntax, Data Types, and Operators
+const event_name="evening"
+const date="13.09.2005"
+let seats=50
+console.log(`event_name:${event_name}`)
+console.log(`date:${date}`)
+console.log(`seats:${seats}`)
+seats--
+console.log("after regisered")
+console.log(`seats:${seats}`)
